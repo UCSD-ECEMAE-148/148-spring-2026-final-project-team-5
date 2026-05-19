@@ -4,14 +4,7 @@
 Team 5 Final Project Repository - Hazardous Location Recon
 
 <img src="download.png">
-<img src="">
 
-<div>
-<h3>This is the github repo for Team 5 </h3>
-<body>
-  <p>
-  Text Here.
-  </p>
   
 </body>
 
@@ -51,10 +44,10 @@ Team 5 Spring 26
 
 <h4>Team Member Major and Class </h4>
 <ul>
-  <li>Josiah - ME</li>
-  <li>Kim - </li>
-  <li>Kathya -  </li>
-  <li>AnMei - </li>
+  <li>Josiah - MAE</li>
+  <li>Kim - MAE</li>
+  <li>Kathya -  ECE</li>
+  <li>AnMei - ECE</li>
 </ul>
 
 <!-- Final Project -->
@@ -63,30 +56,25 @@ Team 5 Spring 26
 
 <!-- Original Goals -->
 ### Original Goals
-Description Here
+The robot drives into a "danger zone" on its own. It uses its camera to "scout" for trouble. When it finds a hazard, it stops, drops a physical marker to show where the danger is, and saves the exact location (GPS) on a map. We planned to navigate within a certain grid, use the OAK-D Camera and a YOLO model to identify the targets and run a standard program upon identification. This program will consist of dropping the marker, finding the second and returning back home. 
 <!--example non visible text here -->
    
 <!-- End Results -->
 ### Goals We Met
 <p>
-  Write Here
-</p>
+  We are currently in the development phase of the initial mechanical prototypes while we catch up on the remaining class content. 
 
-<p>
-  new Paragraph
-</p>
-<p>
-  more details
-</p>
+  Final updates will be placed accordingly upon completion. 
+
 
 
 ### If We Have Another Week...
 #### Stretch Goal 1
-more
+Identify and locate more targets. 
 
 
 #### Stretch Goal 2
-more
+Fly. 
 
 
 ## Final Project Documentation
@@ -95,11 +83,19 @@ more
 ### CAD Design etc etc
 <!--<img src="/media/full%20car%20cad.png" width="400" height="300" />-->
 
+#### Modeled Ourselves
+| Part | CAD Model | Description |
+|------|--------| -------------------- |
+| Base PLate | <img src="jetsonCAD.png" /> | ----- |
+| Camera Mount | <img src="jetsonCAD.png" /> |  ----- |
+| Payload Bay | <img src="jetsonCAD.png" /> |  ----- |
+| Payload | <img src="jetsonCAD.png" /> | ----- |
+
 #### Open Source Parts
-Use below as example from Jose \/
 | Part | CAD Model | Source |
 |------|--------|-----------|
-| Jetson Nano Case | <img src="jetsonCAD.png" /> | [Thingiverse](https://www.thingiverse.com/thing:3532828) |
+| Part | <img src="" /> | ------------------- |
+| Part | <img src="" /> | [Thingiverse](https://www.thingiverse.com/thing:3532828) |
 
 ### Software
 
@@ -132,13 +128,13 @@ Josiah, Kim, Kathya, AnMei
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-*italicized format*
+*This class be pretty cool. Fun fact: We're nowhere close to finishing this at the moment.*
 
 
 <!-- CONTACT -->
 ## Contact
 
 * Josiah | jhallett@ucsd.edu
-*  insert
-* insert
-* insert
+* Kim | insert here
+* AnMei | insert here
+* Kathya | insert here
