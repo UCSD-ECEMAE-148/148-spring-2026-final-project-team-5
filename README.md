@@ -3,7 +3,7 @@
 # UCSD ECEMAE148 Team5 FinalProject
 Team 5 Final Project Repository - Hazardous Location Recon
 
-<img src="">
+<img src="UCSD-JacobsSchool-USpace_explainer_1@4x_0.png">
 <img src="">
 
 <div>
