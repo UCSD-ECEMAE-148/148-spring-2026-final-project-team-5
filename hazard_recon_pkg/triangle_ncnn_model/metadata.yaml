@@ -1,0 +1,20 @@
+description: Ultralytics YOLO11n model trained on triangle-detection
+author: Ultralytics
+date: '2026-05-31T13:07:02.662497'
+version: 8.4.57
+license: AGPL-3.0 License
+stride: 32
+task: detect
+batch: 1
+imgsz:
+- 640
+- 640
+names:
+  0: blue triangle
+  1: green triangle
+  2: red trangle
+args:
+  batch: 1
+  half: false
+channels: 3
+end2end: false
