@@ -81,10 +81,10 @@ Fly.
 #### Modeled Ourselves
 | Part | CAD Model |
 |------|--------|
-| Hazards | <a href="assets/Hazards.stl"> Hazards.stl in 3D</a> |
-| Camera Mount | <img src="jetsonCAD.png" /> |
-| Payload Bay | <img src="jetsonCAD.png" /> |
-| Payload | <img src="jetsonCAD.png" /> |
+| Hazards | <a href="assets/Hazards.stl"> Hazards.stl |
+| Camera Mount | <a href="assets/Camera Mount.stl"> Camera Mount.stl |
+| Payload Bay | <a href="assets/Hazards.stl"> Hazards.stl |
+| Payload | <a href="assets/Hazards.stl"> Hazards.stl |
 
 #### Open Source Parts
 | Part | CAD Model | Source |
