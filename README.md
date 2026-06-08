@@ -55,8 +55,8 @@ Team 5 Spring 26
             <li><a href="#how-to-run">How to Run</a></li>
           </ul>
       </ul>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
     <li><a href="#authors">Authors</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
