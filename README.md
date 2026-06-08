@@ -39,22 +39,20 @@ Team 5 Spring 26
                 <li><a href="#stretch-goal-1">Stretch Goal 1</a></li>
                 <li><a href="#stretch-goal-2">Stretch Goal 2</a></li>
               </ul>
-          </ul>
-        <li><a href="#final-project-documentation">Final Project Documentation</a></li>
-      </ul>
-    <li><a href="#robot-design">Robot Design </a></li>
+         </ul>
+       </ul>
+    <li><a href="#final-project-documentation">Final Project Documentation</a></li>
+    <ul>
+      <li><a href="#CAD-Design">CAD Design </a></li>
       <ul>
-        <li><a href="#cad-parts">CAD Parts</a></li>
-          <ul>
-            <li><a href="#final-assembly">Final Assembly</a></li>
-            <li><a href="#custom-designed-parts">Custom Designed Parts</a></li>
+            <li><a href="Modeled-Ourselves">Modeled Ourselves Parts</a></li>
             <li><a href="#open-source-parts">Open Source Parts</a></li>
           </ul>
-        <li><a href="#electronic-hardware">Electronic Hardware</a></li>
+        <li><a href="#Software">Software</a></li>
           <ul>
             <li><a href="#embedded-systems">Embedded Systems</a></li>
             <li><a href="#ros2">ROS2</a></li>
-            <li><a href="#donkeycar-ai">DonkeyCar AI</a></li>
+            <li><a href="#how-to-run">How to Run</a></li>
           </ul>
       </ul>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -107,7 +105,7 @@ Fly.
 ## Final Project Documentation
 
 <!-- Early Quarter -->
-### CAD Design etc etc
+### CAD Design
 <!--<img src="/media/full%20car%20cad.png" width="400" height="300" />-->
 
 #### Modeled Ourselves
