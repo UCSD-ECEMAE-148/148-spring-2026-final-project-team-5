@@ -65,11 +65,6 @@ Team 5 Spring 26
 <!-- TEAM MEMBERS -->
 ## Team Members
 
-<div align="center">
-    <p align = "center">Josiah, Kim, Kathya, AnMei</p>
-</div>
-
-<h4>Team Member Major and Class </h4>
 <ul>
   <li>Josiah - Mechanical Engineering - '28</li>
   <li>Kim - MAE</li>
