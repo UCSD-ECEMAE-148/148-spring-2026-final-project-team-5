@@ -45,7 +45,7 @@ Team 5 Spring 26
     <ul>
       <li><a href="#CAD-Design">CAD Design </a></li>
       <ul>
-            <li><a href="Modeled-Ourselves">Modeled Ourselves Parts</a></li>
+            <li><a href="modeled-ourselves">Modeled Ourselves</a></li>
             <li><a href="#open-source-parts">Open Source Parts</a></li>
           </ul>
         <li><a href="#Software">Software</a></li>
