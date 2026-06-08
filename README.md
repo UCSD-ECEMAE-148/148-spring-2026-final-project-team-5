@@ -3,7 +3,7 @@
 # UCSD ECEMAE148 Team5 FinalProject
 Team 5 Final Project Repository - Hazardous Location Recon
 
-<img src="download.png">
+<img src="assets/download.png">
 
   
 </body>
@@ -22,7 +22,8 @@ Team 5 Final Project Repository - Hazardous Location Recon
 Team 5 Spring 26
 </p>
 
-<img src="79988323286__F688DE66-4960-481D-8C87-181B5B492347.jpeg" width="504" height="672">
+<img src="placeholder width="504" height="672">
+
 
 Current Placeholder From Week 1
 
