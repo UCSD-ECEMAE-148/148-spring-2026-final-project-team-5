@@ -1,31 +1,25 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/r686kJSN)
+# UCSD ECE/MAE 148 Team 5 - Hazardous Location Reconnissance
 
-# UCSD ECEMAE148 Team5 FinalProject
-Team 5 Final Project Repository - Hazardous Location Recon
-
+<div align="center">
 <img src="assets/download.png">
-
+</div>
   
 </body>
-
 
 <div id="top"></div>
 
 <h1 align="center">Hazardous Location Reconissance</h1>
 <h4 align="center"></h4>
 <!-- PROJECT LOGO -->
-<br />
 <div align="center">
 
-<h3>ECEMAE148 Final Project</h3>
+
+<h3>ECE/MAE148 Final Project</h3>
 <p>
 Team 5 Spring 26
 </p>
 
-<img src="placeholder width="504" height="672">
-
-
-Current Placeholder From Week 1
+<img src="assets/">
 
 </div>
 
@@ -47,7 +41,7 @@ Current Placeholder From Week 1
 
 <h4>Team Member Major and Class </h4>
 <ul>
-  <li>Josiah - MAE</li>
+  <li>Josiah - Mechanical Engineering - '28</li>
   <li>Kim - MAE</li>
   <li>Kathya -  ECE</li>
   <li>AnMei - ECE</li>
@@ -59,15 +53,13 @@ Current Placeholder From Week 1
 
 <!-- Original Goals -->
 ### Original Goals
-The robot drives into a "danger zone" on its own. It uses its camera to "scout" for trouble. When it finds a hazard, it stops, drops a physical marker to show where the danger is, and saves the exact location (GPS) on a map. We planned to navigate within a certain grid, use the OAK-D Camera and a YOLO model to identify the targets and run a standard program upon identification. This program will consist of dropping the marker, finding the second and returning back home. 
+Our initial goals consisted of identifying and notifying individuals of a hazardous location through a physical marker. Following along a specified route, there would be four posibble inputs while running: Hazard 1 (Fire), Hazard 2 (Toxic Spill), False Hazard, and Home Base. While running the laps the car would use the OAK-D camera and a YOLO model to idenntify and report one of the inputs when spotted. For each hazard, the car would drop one of two markers depending on the hazard, for the false report the car will do nothing and note its identification, and upon finding all 3 other would return to the home base having completed its task. 
 <!--example non visible text here -->
    
 <!-- End Results -->
 ### Goals We Met
 <p>
-  We are currently in the development phase of the initial mechanical prototypes while we catch up on the remaining class content. 
-
-  Final updates will be placed accordingly upon completion. 
+---- honestly not sure right now
 
 
 
