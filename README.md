@@ -19,7 +19,7 @@
 Team 5 Spring 26
 </p>
 
-<img src="assets/">
+<img src="assets/car1.jpg">
 
 </div>
 
