@@ -79,12 +79,12 @@ Fly.
 <!--<img src="/media/full%20car%20cad.png" width="400" height="300" />-->
 
 #### Modeled Ourselves
-| Part | CAD Model | Description |
-|------|--------| -------------------- |
-| Base PLate | <img src="jetsonCAD.png" /> | ----- |
-| Camera Mount | <img src="jetsonCAD.png" /> |  ----- |
-| Payload Bay | <img src="jetsonCAD.png" /> |  ----- |
-| Payload | <img src="jetsonCAD.png" /> | ----- |
+| Part | CAD Model |
+|------|--------|
+| Hazards | <a href="assets/Hazards.stl"> Hazards.stl in 3D</a> |
+| Camera Mount | <img src="jetsonCAD.png" /> |
+| Payload Bay | <img src="jetsonCAD.png" /> |
+| Payload | <img src="jetsonCAD.png" /> |
 
 #### Open Source Parts
 | Part | CAD Model | Source |
