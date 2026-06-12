@@ -3,20 +3,25 @@
 ROS2 node: YOLO detection using OAK-D camera.
 Publishes detected triangle class to /hazard_detected as a String.
 Also streams annotated frames via MJPEG at http://<PI_IP>:8080
+
+  green triangle → Servo 1 drops green puck
+  red triangle   → Servo 2 drops red puck
 """
 
+import threading
+import time
+from http.server import BaseHTTPRequestHandler, HTTPServer
+
+import cv2
+import depthai as dai
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
-
 from ultralytics import YOLO
-import depthai as dai
-import cv2
-import threading
-from http.server import BaseHTTPRequestHandler, HTTPServer
 
-MODEL_PATH  = "/home/projects/final_ws/src/148-spring-2026-final-project-team-5/hazard_recon_pkg/triangle_ncnn_model/"
-CONF_THRESH = 0.65
+MODEL_PATH  = "/home/projects/final_ws/src/148-spring-2026-final-project-team-5/hazard_recon_pkg/triangle_ncnn_model_old/"
+#CONF_THRESH = 0.80
+CONF_THRESH = 0.75
 STREAM_PORT = 8080
 LABELS      = ["blue triangle", "green triangle", "red trangle"]
 
@@ -26,18 +31,16 @@ COLORS = {
     "red trangle":    (0, 0, 220),
 }
 
-# Aspect ratio guard
 MIN_ASPECT = 0.5
 MAX_ASPECT = 2.0
 
-# Shared frame for MJPEG stream
 latest_frame = None
 frame_lock = threading.Lock()
 
 
 class MJPEGHandler(BaseHTTPRequestHandler):
     def log_message(self, format, *args):
-        pass  # suppress access logs
+        pass
 
     def do_GET(self):
         if self.path == "/":
@@ -97,7 +100,6 @@ class YoloDetectionNode(Node):
         super().__init__('yolo_detection_node')
         self.pub = self.create_publisher(String, '/hazard_detected', 10)
 
-        # Start MJPEG server in background
         t = threading.Thread(target=start_mjpeg_server, daemon=True)
         t.start()
         self.get_logger().info(f'Stream server started — open http://<PI_IP>:{STREAM_PORT}')
@@ -136,25 +138,23 @@ class YoloDetectionNode(Node):
                         label  = LABELS[cls_id] if cls_id < len(LABELS) else 'unknown'
                         color  = COLORS.get(label, (255, 255, 255))
 
-                        # Aspect ratio filter
                         x1, y1, x2, y2 = map(int, box.xyxy[0])
                         w, h = x2 - x1, y2 - y1
                         aspect = w / h if h > 0 else 0
                         if aspect < MIN_ASPECT or aspect > MAX_ASPECT:
                             continue
 
-                        # Draw bounding box
                         cv2.rectangle(frame, (x1, y1), (x2, y2), color, 2)
                         cv2.putText(frame, f"{label} {conf:.2f}",
                                     (x1, y1 - 8),
                                     cv2.FONT_HERSHEY_SIMPLEX, 0.6, color, 2)
 
                         self.get_logger().info(f'Detected: {label} ({conf:.2f})')
+
                         msg = String()
                         msg.data = label
                         self.pub.publish(msg)
 
-                # Push annotated frame to stream
                 with frame_lock:
                     latest_frame = frame.copy()
 
@@ -173,3 +173,4 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
+

@@ -19,11 +19,13 @@ SERVO1_PIN = 12   # green puck
 SERVO2_PIN = 13   # red puck
 FREQ       = 50   # 50Hz PWM
 
-# Duty cycles — tune once servos are mounted in payload bay
+DEG_TO_DC = 10.0 / 180.0
+
+# Duty cycles
 SERVO1_HOLD = 2.5
-SERVO1_DROP = 7.5
-SERVO2_HOLD = 12.5
-SERVO2_DROP = 7.5
+SERVO1_DROP = SERVO1_HOLD + (20 * DEG_TO_DC)   # ~3.61%
+SERVO2_HOLD = 13.0
+SERVO2_DROP = SERVO2_HOLD - (20 * DEG_TO_DC)   # ~11.89%
 
 DROP_DURATION = 1.0  # seconds to hold drop position
 COOLDOWN      = 3.0  # seconds before servo can fire again
@@ -42,8 +44,8 @@ class ServoPayloadNode(Node):
         self.pwm2.start(0)
 
         # Move both to hold on startup
-        self._set_angle(self.pwm1, SERVO1_HOLD)
-        self._set_angle(self.pwm2, SERVO2_HOLD)
+        self._set_dc(self.pwm1, SERVO1_HOLD)
+        self._set_dc(self.pwm2, SERVO2_HOLD)
 
         self.servo1_lock = threading.Lock()
         self.servo2_lock = threading.Lock()
@@ -52,26 +54,29 @@ class ServoPayloadNode(Node):
             String, '/hazard_detected', self.detection_callback, 10)
         self.get_logger().info('Servo payload node ready.')
 
-    def _set_angle(self, pwm, duty):
+    def _set_dc(self, pwm, duty, hold_time=1.5):
+        """Set duty cycle, hold for hold_time, then cut power."""
         pwm.ChangeDutyCycle(duty)
-        time.sleep(0.5)
+        time.sleep(hold_time)
         pwm.ChangeDutyCycle(0)
 
     def _drop_servo1(self):
         self.get_logger().info('Servo1 (green): DROP')
-        self._set_angle(self.pwm1, SERVO1_DROP)
+        self._set_dc(self.pwm1, SERVO1_DROP)
         time.sleep(DROP_DURATION)
-        self._set_angle(self.pwm1, SERVO1_HOLD)
-        self.get_logger().info('Servo1 (green): returned to hold')
+        self.get_logger().info('Servo1 (green): returning to hold')
+        self._set_dc(self.pwm1, SERVO1_HOLD)
+        self.get_logger().info('Servo1 (green): hold')
         time.sleep(COOLDOWN)
         self.servo1_lock.release()
 
     def _drop_servo2(self):
         self.get_logger().info('Servo2 (red): DROP')
-        self._set_angle(self.pwm2, SERVO2_DROP)
+        self._set_dc(self.pwm2, SERVO2_DROP)
         time.sleep(DROP_DURATION)
-        self._set_angle(self.pwm2, SERVO2_HOLD)
-        self.get_logger().info('Servo2 (red): returned to hold')
+        self.get_logger().info('Servo2 (red): returning to hold')
+        self._set_dc(self.pwm2, SERVO2_HOLD)
+        self.get_logger().info('Servo2 (red): hold')
         time.sleep(COOLDOWN)
         self.servo2_lock.release()
 
