@@ -84,8 +84,7 @@ Our initial goals consisted of identifying and notifying individuals of a hazard
 <!-- End Results -->
 ### Goals We Met
 <p>
----- honestly not sure right now
-
+We succefully developed the car to navigate manually and complete the tasks. At the moment both the green and red hazards respond correctly to the servos and drop the corrected marker. 
 
 
 ### If We Have Another Week...
