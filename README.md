@@ -113,8 +113,7 @@ Fly.
 #### Open Source Parts
 | Part | CAD Model | Source |
 |------|--------|-----------|
-| Part | <img src="" /> | ------------------- |
-| Part | <img src="" /> | [Thingiverse](https://www.thingiverse.com/thing:3532828) |
+| Camera | <img src="" /> | ------------------- |
 
 ### Software
 
