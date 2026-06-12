@@ -111,9 +111,9 @@ Fly.
 | Payload | <a href="assets/Hazards.stl"> Hazards.stl |
 
 #### Open Source Parts
-| Part | CAD Model | Source |
-|------|--------|-----------|
-| Camera | <img src="" /> | ------------------- |
+| Part | CAD Model |
+|------|--------|
+| Camera | <a href="camera (2).stl"> Camera |
 
 ### Software
 
