@@ -108,8 +108,9 @@ Fly.
 | Hazards | <a href="assets/Hazards.stl"> Hazards.stl |
 | Camera Mount | <a href="assets/Camera Mount.stl"> Camera Mount.stl |
 | Payload Bay | <a href="PayloadBay.stl"> PayloadBay.stl |
-| Payload | <a href="HazardMarkerGreen"> <a href="HazardMarkerRed"> |
-| Chassis | <a href="ChassisFinal.stl"> |
+| Payload | <a href="HazardMarkerGreen"> HazardMarkerGreen.stl |
+| Payload Bay | <a href="HazardMarkerRed"> HazardMarkerRed.stl |
+| Chassis | <a href="ChassisFinal.stl"> ChassisFinal.stl|
 
 #### Open Source Parts
 | Part | CAD Model |
