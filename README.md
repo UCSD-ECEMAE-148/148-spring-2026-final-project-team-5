@@ -67,9 +67,9 @@ Team 5 Spring 26
 
 <ul>
   <li>Josiah - Mechanical Engineering - '28</li>
-  <li>Kim - MAE</li>
-  <li>Kathya -  ECE</li>
-  <li>AnMei - ECE</li>
+  <li>Kim - Mechanical Engineering - '26</li>
+  <li>Kathya -  Electrical Engineering - '27</li>
+  <li>AnMei - Computer Engineering - '27</li>
 </ul>
 
 <!-- Final Project -->
@@ -155,5 +155,5 @@ Josiah, Kim, Kathya, AnMei
 
 * Josiah | jhallett@ucsd.edu
 * Kim | insert here
-* AnMei | insert here
-* Kathya | insert here
+* AnMei | adasbachprisk@ucsd.edu
+* Kathya | kromanotepozteco@ucsd.edu
