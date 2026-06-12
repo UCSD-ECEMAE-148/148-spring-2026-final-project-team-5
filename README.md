@@ -84,17 +84,15 @@ Our initial goals consisted of identifying and notifying individuals of a hazard
 <!-- End Results -->
 ### Goals We Met
 <p>
-We succefully developed the car to navigate manually and complete the tasks. At the moment both the green and red hazards respond correctly to the servos and drop the corrected marker. 
+We succefully developed the car to navigate manually and complete the tasks. At the moment both the green and red hazards respond correctly to the servos and drop the corrected marker. This ultiimatley was the most important objective in our project and we succeeded. The car can succcesfully identify the various hazards and respond approppriatley to encountering them on its path. 
 
 
 ### If We Have Another Week...
 #### Stretch Goal 1
-Identify and locate more targets. 
-
+Firstly, we would make the car complete the work  fully autonomously. While we succeded in practice, connecting to the servos and making them run upon detection of the correct hazard we had to manually drive. This deviated significantly from our original goals but becqame a neccecity due to time constraints. For this reason, if we had more time we would finish what we started and have the car be completing autonomous laps outside the JSOE building. 
 
 #### Stretch Goal 2
-Fly. 
-
+Secondly, we would add the GPS componentnt to the car, linking live results to a website that stored gps locations of the hazard. To do so we would use the camera to also account for depth and the GPS to place a pin calculating the distance to the hazard. This would serve as an alert system for anyone with the website of an approaching hazard to their location. 
 
 ## Final Project Documentation
 
@@ -109,8 +107,8 @@ Fly.
 | Camera Mount | <a href="assets/Camera Mount.stl"> Camera Mount.stl |
 | Payload Bay | <a href="PayloadBay.stl"> PayloadBay.stl |
 | Mount | <a href="assets/Mount.stl"> Mount.stl |
-| Payload | <a href="HazardMarkerGreen.stl"> HazardMarkerGreen.stl |
-| Payload Bay | <a href="HazardMarkerRed.stl"> HazardMarkerRed.stl |
+| Green Marker | <a href="HazardMarkerGreen.stl"> HazardMarkerGreen.stl |
+| Red Marker | <a href="HazardMarkerRed.stl"> HazardMarkerRed.stl |
 | Chassis | <a href="ChassisFinal.stl"> ChassisFinal.stl |
 
 #### Open Source Parts
@@ -149,7 +147,7 @@ Josiah, Kim, Kathya, AnMei
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-*This class be pretty cool. Fun fact: We're nowhere close to finishing this at the moment.*
+*This class be pretty cool. Fun fact: We had to change our idea various times but the final product is pretty cool.*
 
 
 <!-- CONTACT -->
