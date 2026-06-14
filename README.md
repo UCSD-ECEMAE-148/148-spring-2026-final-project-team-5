@@ -186,7 +186,7 @@ This brings up YOLO triangle detection, servo payload drop, and GPS logging toge
 
 ### 4. Manual driving (optional, host-side)
 
-On the host machine (outside Docker), run:
+If ROS2 auto-laps not working, on the host machine (outside Docker), run:
 
 ```bash
 python3 drive.py
