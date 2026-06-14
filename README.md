@@ -1,7 +1,7 @@
 # UCSD ECE/MAE 148 Team 5 - Hazardous Location Reconnissance
 
 <div align="center">
-<img src="assets/final_car.JPG">
+<img src="assets/download.png">
 </div>
   
 </body>
@@ -19,7 +19,7 @@
 Team 5 Spring 26
 </p>
 
-<img src="assets/car1.jpg">
+<img src="assets/final_car.JPG">
 
 </div>
 
