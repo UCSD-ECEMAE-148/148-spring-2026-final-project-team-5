@@ -89,7 +89,7 @@ We succefully developed the car to navigate manually and complete the tasks. At 
 
 ### If We Have Another Week...
 #### Stretch Goal 1
-Firstly, we would make the car complete the work  fully autonomously. While we succeded in practice, connecting to the servos and making them run upon detection of the correct hazard we had to manually drive. This deviated significantly from our original goals but becqame a neccecity due to time constraints. For this reason, if we had more time we would finish what we started and have the car be completing autonomous laps outside the JSOE building. 
+Firstly, we would make the car complete the work  fully autonomously. While we succeded in practice, connecting to the servos and making them run upon detection of the correct hazard we had to manually drive. This deviated significantly from our original goals but became a neccecity due to time constraints. For this reason, if we had more time we would finish what we started and have the car be completing autonomous laps outside the JSOE building. 
 
 #### Stretch Goal 2
 Secondly, we would add the GPS componentnt to the car, linking live results to a website that stored gps locations of the hazard. To do so we would use the camera to also account for depth and the GPS to place a pin calculating the distance to the hazard. This would serve as an alert system for anyone with the website of an approaching hazard to their location. 
@@ -117,22 +117,82 @@ Secondly, we would add the GPS componentnt to the car, linking live results to a
 | Camera | <a href="CameraCAD.stl"> Camera |
 
 ### Software
-
-#### Embedded Systems
-text
+#### Component List
+| Component | Purpose |
+|---|---|
+| Raspberry Pi 5 | Main onboard compute |
+| OAK-D camera | Vision input for YOLO triangle detection |
+| VESC motor controller | Drive motor + steering control, odometry |
+| Servo 1 | Drops payload on hazard detection |
+| Servo 2 | Drops payload on hazard detection |
+| GPS module | Position logging, connected on `/dev/ttyACM0` |
+| Logitech F710 joystick | Manual driving input |
 
 #### ROS2
-text 
+The autonomous stack is implemented as a ROS2 package, `hazard_recon_pkg`, containing the following nodes:
 
-
-
+| Node | File | Role |
+|---|---|---|
+| `yolo_detection_node` | `yolo_detection_node.py` | Runs YOLO-based triangle detection (blue/green/red triangle classes) on the camera feed |
+| `servo_payload_node` | `servo_payload_node.py` | Listens for hazard detections and triggers the payload-drop servo |
+| `gps_logger_node` | `gps_logger_node.py` | Logs GPS position data throughout the run |
 
 ### How to Run
-text
+**Launch file:**
 
-```example for_format```
+`hazardrecon.launch.py` brings up the full stack (`yolo_detection_node`, `servo_payload_node`, `gps_logger_node`) together.
 
+---
 
+# How to Run
+
+### Prerequisites
+
+This project runs inside the UCSD Robocar Docker image used for ECE/MAE 148:
+
+```bash
+docker pull ghcr.io/ucsd-ecemae-148/ucsd_robocar:stable
+```
+
+If the container hasn't been created yet, follow the class setup guide to create it. Guide can be found <a href= "https://ucsd-ecemae-148.github.io/Markdown-Instructions/index.html#s2">Here
+
+### 1. Enter the Docker container
+
+```bash
+docker start robocar_team5
+docker exec -it robocar_team5 bash
+```
+
+### 2. Set up a separate workspace for the custom package
+
+Our `hazard_recon_pkg` lives in its own ROS2 workspace inside the container (separate from `ucsd_robocar_hub2`):
+
+```bash
+mkdir -p ~/hazard_ws/src
+cd ~/hazard_ws/src
+git clone https://github.com/UCSD-ECEMAE-148/148-spring-2026-final-project-team-5.git
+cd ~/hazard_ws
+colcon build --symlink-install
+source install/setup.bash
+```
+
+### 3. Launch the autonomous stack
+
+```bash
+ros2 launch hazard_recon_pkg hazardrecon.launch.py
+```
+
+This brings up YOLO triangle detection, servo payload drop, and GPS logging together.
+
+### 4. Manual driving (optional, host-side)
+
+On the host machine (outside Docker), run:
+
+```bash
+python3 drive.py
+```
+
+This uses the F710 joystick for manual control.
 
 Video Demo
 <a href= "https://youtube.com/shorts/KrsDLd-abaA?feature=share">Here
@@ -146,6 +206,7 @@ Josiah, Kim, Kathya, AnMei
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
+Much appreciation to Professor Silberman and TAs Jose and Winston.
 
 *This class be pretty cool. Fun fact: We had to change our idea various times but the final product is pretty cool.*
 
