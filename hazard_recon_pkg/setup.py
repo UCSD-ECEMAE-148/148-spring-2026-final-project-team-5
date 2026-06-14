@@ -28,10 +28,9 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'camera_master_node = hazard_recon_pkg.camera_master_node:main',
             'servo_payload_node = hazard_recon_pkg.servo_payload_node:main',
             'gps_logger_node = hazard_recon_pkg.gps_logger_node:main',
-            'gps_navigation_node = hazard_recon_pkg.gps_navigation_node:main',
+            'yolo_detection_node = hazard_recon_pkg.yolo_detection_node:main',
         ],
     },
 )
